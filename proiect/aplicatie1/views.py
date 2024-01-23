@@ -1,3 +1,5 @@
+import datetime
+
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import redirect
@@ -12,6 +14,10 @@ class LocationView(LoginRequiredMixin, ListView):
     model = Location
     template_name = 'aplicatie1/location_index.html'
 
+    def get_context_data(self, *args, **kwargs):
+        data = super(LocationView, self).get_context_data(*args, **kwargs)
+        data['data_curenta'] = datetime.datetime.now()
+        return data
 
 class CreateLocationView(LoginRequiredMixin, CreateView):
     model = Location

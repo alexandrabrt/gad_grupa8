@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
+    Data curenta: {{ data_curenta }}
     <div class="col-md-12">
         <form method="POST">
             {% csrf_token %}

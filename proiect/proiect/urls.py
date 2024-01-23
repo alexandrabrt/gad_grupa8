@@ -22,5 +22,7 @@ urlpatterns = [
     path('location/', include('aplicatie1.urls')),
     path('', LoginView.as_view(template_name='registration/login.html'), name='login'),
     path('', include('django.contrib.auth.urls'), {'next_page': '/'}, name='login'),
+    path('pontaj/', include('pontaj.urls')),
+    path('user_profile/', include('userprofile.urls')),
 
 ]

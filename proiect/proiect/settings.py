@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'aplicatie1',
     'pontaj',
     'userprofile',
+    'rest_framework',
+    'my_api',
 ]
 
 MIDDLEWARE = [

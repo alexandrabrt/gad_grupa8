@@ -24,5 +24,6 @@ urlpatterns = [
     path('', include('django.contrib.auth.urls'), {'next_page': '/'}, name='login'),
     path('pontaj/', include('pontaj.urls')),
     path('user_profile/', include('userprofile.urls')),
+    path('my_api/', include('my_api.urls')),
 
 ]
